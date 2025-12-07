@@ -8,3 +8,11 @@ require(["vs/editor/editor.main"], function () {
         automaticLayout: true,
     });
 });
+
+document.getElementById("tab").addEventListener("click", () => {
+    editor.trigger("manual", "type", { text: "\t" });
+});
+
+document.getElementById("formatar").addEventListener("click", () => {
+    editor.getAction("editor.action.formatDocument").run();
+});
