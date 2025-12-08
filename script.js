@@ -16,3 +16,13 @@ document.getElementById("tab").addEventListener("click", () => {
 document.getElementById("formatar").addEventListener("click", () => {
     editor.getAction("editor.action.formatDocument").run();
 });
+
+// (Ctrl+Z)
+document.getElementById("desfazer").addEventListener("click", () => {
+    editor.trigger("manual", "undo");
+});
+
+// (Ctrl+Y)
+document.getElementById("refazer").addEventListener("click", () => {
+    editor.trigger("manual", "redo");
+});
